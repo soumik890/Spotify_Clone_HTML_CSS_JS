@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+
+body {
+  background-color: #ededed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  font-family: "Ubuntu";
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  height: 70px;
+  background-color: black;
+  color: azure;
+}
+
+.brand img {
+  width: 50px;
+}
+
+nav ul li {
+  padding: 0 10px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0 10px;
+}
+
+.container {
+  min-height: 75vh;
+  background-color: black;
+  color: white;
+  font-family: "Ubuntu";
+  display: flex;
+  margin: 23px auto;
+  width: 70%;
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.bottom {
+  position: sticky;
+  background-color: black;
+  height: 130px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-direction: column;
+}
+
+#progressbar {
+  width: 80vw;
+  cursor: pointer;
+}
+
+#play {
+  width: 40px;
+  cursor: pointer;
+}
+
+.icons {
+  margin-top: 20px;
+}
+
+#playMusic {
+  margin: auto auto;
+  background-color: white;
+}

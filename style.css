@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
 
 body {
   background-color: #ededed;
@@ -72,12 +71,54 @@ nav ul li {
   width: 40px;
   cursor: pointer;
 }
+#prev {
+  width: 40px;
+  cursor: pointer;
+}
+#next {
+  width: 40px;
+  cursor: pointer;
+}
 
 .icons {
   margin-top: 20px;
 }
 
 #playMusic {
-  margin: auto auto;
+  height: 300px;
+  margin-top: 200px;
+}
+
+#play1 {
+  height: 20px;
+}
+
+.timestamp {
+  margin: 0 23px;
+}
+
+.songItem {
+  height: 50px;
+  display: flex;
   background-color: white;
+  color: black;
+  margin: 12px 0;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 34px;
+}
+
+.images {
+  width: 40px;
+  border-radius: 50px;
+  margin-left: 10px;
+}
+
+.songInfo {
+  font-family: "Ubuntu";
+}
+
+#gif {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
 }

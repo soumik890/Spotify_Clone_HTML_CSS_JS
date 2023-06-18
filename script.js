@@ -6,7 +6,8 @@ let progressbar = document.getElementById("progressbar");
 let gif = document.getElementById("gif");
 let songItems = Array.from(document.getElementsByClassName("songItem"));
 let masterSong = document.getElementById("masterSongName");
-// masterSong.innerHTML = songs[0].name;
+
+console.log(masterSong);
 
 let songs = [
   { name: "No Copyrights track", path: "songs/1.mp3", imgpath: "covers/1.jpg" },
@@ -57,7 +58,7 @@ let songs = [
   },
 ];
 
-masterSong.innerHTML = songs[0].name;
+// masterSong.innerHTML = songs[0].name;
 
 let audio = new Audio("songs/1.mp3");
 
@@ -72,7 +73,7 @@ play.addEventListener("click", () => {
   if (audio.paused || audio.currentTime <= 0) {
     audio.play();
     // document.getElementById("play").remove();
-    document.getElementById("play").classList.add("test");
+    document.getElementsByClassName("playing").remove();
     gif.style.opacity = 1;
   } else {
     audio.pause();
@@ -113,6 +114,7 @@ document.getElementById("prev").addEventListener("click", (e) => {
     playIndex = parseInt(playIndex) - 1;
     console.log("else fired", playIndex);
     audio.src = `songs/${playIndex}.mp3`;
+    masterSong.innerHTML = songs[playIndex - 1].name;
     audio.currentTime = 0;
     audio.play();
   }
@@ -125,11 +127,14 @@ document.getElementById("next").addEventListener("click", (e) => {
     playIndex = 1;
     audio.src = `songs/${playIndex}.mp3`;
     audio.currentTime = 0;
+    masterSong.innerHTML = songs[playIndex - 1].name;
+
     audio.play();
   } else {
     playIndex = parseInt(playIndex) + 1;
     audio.src = `songs/${playIndex}.mp3`;
     audio.currentTime = 0;
+    masterSong.innerHTML = songs[playIndex - 1].name;
     audio.play();
   }
 });
